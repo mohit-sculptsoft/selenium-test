@@ -1,0 +1,13 @@
+name: Workflow A
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  trigger_next_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run job
+        run: echo "Job completed"
