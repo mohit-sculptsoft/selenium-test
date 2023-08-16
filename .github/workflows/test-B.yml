@@ -1,0 +1,14 @@
+name: Workflow B
+
+on:
+  workflow_run:
+    workflows: ["Workflow A"]
+    types:
+      - completed
+
+jobs:
+  triggered_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run triggered job
+        run: echo "Triggered job completed"
