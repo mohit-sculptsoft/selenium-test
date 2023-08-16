@@ -1,0 +1,21 @@
+name: Trigger Main Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      approval: # Add any input parameters needed
+        description: 'Signal for approval'
+        required: true
+
+jobs:
+  trigger_main_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Main Workflow
+        run: |
+          # Use GitHub API to create a pull request with dummy changes indicating approval signal
+          # Example: create a new branch or modify a file
+          # Make sure to set up appropriate authorization using secrets or tokens
+          # Replace with your actual API calls
+          echo "hello mohit!!"
